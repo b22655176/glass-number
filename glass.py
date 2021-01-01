@@ -7,7 +7,12 @@
 
 
 import random #把ramdon這個模組 載入近來我的程式
-r = random . randint(1,100)#才能使用這個模組 產生隨機整數(randint)範圍1-100
+start = input('請決定隨機數字開始值') #讓使用者決定開始範圍
+end = input('請決定隨機數字的結束值') #讓使用者決定結束範圍
+start = int(start) #因為是數字要把start 轉換成整數
+end = int(end) #因為是數字要把end 轉換成整數
+
+r = random . randint(start,end)#才能使用這個模組 產生隨機整數(randint)範圍1-100
 
 count = 0 #計數為0 連一次都還沒猜(希望程式一邊猜一邊猜第幾次)
 while True: #重複用while (無限走 直到猜對就離開black)
